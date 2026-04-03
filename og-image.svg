@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F4F0FB"/>
+      <stop offset="100%" style="stop-color:#E4DCFA"/>
+    </linearGradient>
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#F4F0FB;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1100" cy="80" r="180" fill="#7C5CBF" opacity="0.06"/>
+  <circle cx="100" cy="580" r="150" fill="#7C5CBF" opacity="0.05"/>
+
+  <!-- Card -->
+  <rect x="80" y="80" width="1040" height="470" rx="32" fill="url(#card-bg)" filter="drop-shadow(0 8px 40px rgba(124,92,191,0.12))"/>
+
+  <!-- Badge -->
+  <rect x="140" y="140" width="220" height="44" rx="22" fill="#EDE9F6"/>
+  <text x="250" y="168" font-family="system-ui,sans-serif" font-size="20" font-weight="700" fill="#7C5CBF" text-anchor="middle">NPI-16 기반 자가진단</text>
+
+  <!-- Main title -->
+  <text x="140" y="250" font-family="system-ui,sans-serif" font-size="62" font-weight="700" fill="#2D2D3A">나의 자기애 성향은</text>
+  <text x="140" y="330" font-family="system-ui,sans-serif" font-size="62" font-weight="700" fill="#7C5CBF">어느 정도일까?</text>
+
+  <!-- Subtitle -->
+  <text x="140" y="390" font-family="system-ui,sans-serif" font-size="28" fill="#7A7A99">임상 검증된 NPI-16 척도로 5분 만에 확인하세요</text>
+
+  <!-- Stats row -->
+  <rect x="140" y="430" width="160" height="60" rx="12" fill="#F4F0FB"/>
+  <text x="220" y="455" font-family="system-ui,sans-serif" font-size="18" fill="#7A7A99" text-anchor="middle">문항 수</text>
+  <text x="220" y="480" font-family="system-ui,sans-serif" font-size="22" font-weight="700" fill="#7C5CBF" text-anchor="middle">16문항</text>
+
+  <rect x="320" y="430" width="160" height="60" rx="12" fill="#F4F0FB"/>
+  <text x="400" y="455" font-family="system-ui,sans-serif" font-size="18" fill="#7A7A99" text-anchor="middle">소요 시간</text>
+  <text x="400" y="480" font-family="system-ui,sans-serif" font-size="22" font-weight="700" fill="#7C5CBF" text-anchor="middle">약 5분</text>
+
+  <rect x="500" y="430" width="160" height="60" rx="12" fill="#F4F0FB"/>
+  <text x="580" y="455" font-family="system-ui,sans-serif" font-size="18" fill="#7A7A99" text-anchor="middle">비용</text>
+  <text x="580" y="480" font-family="system-ui,sans-serif" font-size="22" font-weight="700" fill="#5BB87B" text-anchor="middle">무료</text>
+
+  <!-- Right side decoration -->
+  <circle cx="980" cy="315" r="120" fill="#7C5CBF" opacity="0.08"/>
+  <circle cx="980" cy="315" r="85" fill="#7C5CBF" opacity="0.10"/>
+  <text x="980" y="300" font-family="system-ui,sans-serif" font-size="72" text-anchor="middle">🧠</text>
+  <text x="980" y="360" font-family="system-ui,sans-serif" font-size="24" font-weight="700" fill="#7C5CBF" text-anchor="middle">NPD Self-Check</text>
+
+  <!-- URL -->
+  <text x="600" y="590" font-family="system-ui,sans-serif" font-size="22" fill="#B0ADC5" text-anchor="middle">mental-health-diagnosis.vercel.app</text>
+</svg>
