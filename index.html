@@ -123,10 +123,39 @@
     <div class="ad-label">AD</div>
     <div class="ad-wrap" id="ad-top"></div>
 
-    <!-- FAQ Section for SEO -->
+    <!-- FAQ Section for SEO (static Korean; JS replaces on language change) -->
     <section class="faq-section" aria-label="자주 묻는 질문">
       <h2 class="faq-title" data-i18n="faqTitle">자주 묻는 질문</h2>
-      <div class="faq-list" id="faq-list"></div>
+      <div class="faq-list" id="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-0" onclick="toggleFAQ(this,0)">
+            <span>자기애성 성격장애(NPD)란 무엇인가요?</span>
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" id="faq-a-0" hidden>자기애성 성격장애(NPD)는 과도한 자기중요감, 공감 능력 부족, 찬사에 대한 강한 욕구가 특징인 성격장애입니다. DSM-5에서 공식 진단 기준으로 인정됩니다.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1" onclick="toggleFAQ(this,1)">
+            <span>NPI-16이란 무엇인가요?</span>
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" id="faq-a-1" hidden>NPI-16(Narcissistic Personality Inventory-16)은 자기애 성향을 측정하는 임상적으로 검증된 16문항 자기보고식 척도입니다. 원본 NPI-40의 단축형으로 연구에서 널리 사용됩니다.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2" onclick="toggleFAQ(this,2)">
+            <span>점수가 높으면 무조건 성격장애인가요?</span>
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" id="faq-a-2" hidden>아닙니다. 이 테스트는 자가진단 도구일 뿐입니다. 높은 점수가 반드시 임상적 진단을 의미하지 않습니다. 정확한 진단은 정신건강의학과 전문의만이 할 수 있습니다.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3" onclick="toggleFAQ(this,3)">
+            <span>결과는 어디에 저장되나요?</span>
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" id="faq-a-3" hidden>개인정보(이름, 연락처 등)는 수집하지 않습니다. 점수와 등급 등 익명의 통계 데이터만 분석 목적으로 수집됩니다.</div>
+        </div>
+      </div>
     </section>
   </section>
 

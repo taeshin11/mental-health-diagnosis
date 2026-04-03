@@ -175,14 +175,16 @@ function toggleLang() {
 //  FAQ SECTION
 // ═══════════════════════════════════════════════════
 function renderFAQ() {
+  // Korean FAQ is static in HTML for SEO; only replace content when switching to English
   const container = document.getElementById('faq-list');
   if (!container) return;
+  if (LANG === 'ko') return; // static HTML already has Korean content
   container.innerHTML = '';
   t().faqs.forEach((item, i) => {
     const el = document.createElement('div');
     el.className = 'faq-item';
     el.innerHTML = `
-      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-${i}" onclick="toggleFAQ(this, ${i})">
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-a-${i}" onclick="toggleFAQ(this,${i})">
         <span>${item.q}</span>
         <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
