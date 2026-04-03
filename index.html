@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자기애 성격 자가진단 테스트 | NPD Self-Check</title>
+  <meta name="description" content="자기애성 성격장애(NPD) 자가진단 테스트. NPI-16 기반 16문항으로 5분 만에 나의 자기애 성향을 확인해보세요. 무료 심리 검사.">
+  <meta name="keywords" content="자기애성 성격장애, NPD 자가진단, 나르시시즘 테스트, NPI-16, 자기애 테스트, 성격장애 검사, 무료 심리테스트">
+  <meta name="author" content="NPD Self-Check">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="자기애 성격 자가진단 테스트 | NPD Self-Check">
+  <meta property="og:description" content="NPI-16 기반 16문항으로 나의 자기애 성향을 5분 만에 확인하세요. 무료 정신건강 자가진단.">
+  <meta property="og:image" content="https://mental-health-diagnosis.vercel.app/og-image.png">
+  <meta property="og:url" content="https://mental-health-diagnosis.vercel.app">
+  <meta property="og:locale" content="ko_KR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="자기애 성격 자가진단 테스트 | NPD Self-Check">
+  <meta name="twitter:description" content="NPI-16 기반 16문항으로 나의 자기애 성향을 5분 만에 확인하세요.">
+  <meta name="twitter:image" content="https://mental-health-diagnosis.vercel.app/og-image.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://mental-health-diagnosis.vercel.app">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "NPD Self-Check",
+    "description": "자기애성 성격장애 자가진단 테스트 (NPI-16 기반)",
+    "url": "https://mental-health-diagnosis.vercel.app",
+    "applicationCategory": "HealthApplication",
+    "inLanguage": "ko",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Adsterra Head Script -->
+  <!-- TODO: INSERT_ADSTERRA_KEY - Replace YOUR_KEY below with actual key from Adsterra dashboard -->
+  <!-- <script type="text/javascript">
+    atOptions = { 'key': 'YOUR_KEY', 'format': 'iframe', 'height': 90, 'width': 728, 'params': {} };
+  </script>
+  <script src="//www.highperformanceformat.com/YOUR_KEY/invoke.js"></script> -->
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <span class="logo">🧠 NPD Self-Check</span>
+</header>
+
+<main id="app" role="main">
+
+  <!-- ══════════════════════════════
+       START SCREEN
+  ══════════════════════════════ -->
+  <section id="screen-start" class="screen active" aria-label="시작 화면">
+
+    <!-- Ad: Below hero intro -->
+    <div class="ad-label">AD</div>
+    <div class="ad-wrap" id="ad-top">
+      <!-- Adsterra banner will render here -->
+    </div>
+
+    <div class="card">
+      <span class="hero-badge">NPI-16 기반 자가진단</span>
+      <h1 class="hero-title">나의 <span>자기애 성향</span>은<br>어느 정도일까?</h1>
+      <p class="hero-desc">
+        자기애성 성격장애(NPD)는 자신에 대한 과도한 자부심과 타인에 대한 공감 능력 부족이 특징입니다.
+        임상적으로 검증된 NPI-16 척도로 나의 성향을 점검해보세요.
+      </p>
+      <div class="meta-row">
+        <span>📋 16문항</span>
+        <span>⏱️ 약 5분</span>
+        <span>🔒 익명 처리</span>
+      </div>
+      <button class="btn btn-primary" id="btn-start" onclick="startQuiz()" aria-label="테스트 시작하기">
+        테스트 시작하기 →
+      </button>
+    </div>
+
+    <div class="disclaimer" role="note" aria-label="면책 고지">
+      ⚠️ <strong>면책 고지:</strong> 이 도구는 의학적 진단을 대체하지 않습니다. 결과는 참고용이며, 전문 정신건강의학과 상담을 권장합니다.
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       QUIZ SCREEN
+  ══════════════════════════════ -->
+  <section id="screen-quiz" class="screen" aria-label="진단 문항" aria-live="polite">
+    <div class="progress-wrap" role="progressbar" aria-valuemin="0" aria-valuemax="16" id="progress-region">
+      <div class="progress-label">
+        <span id="progress-text">1 / 16</span>
+        <span id="progress-pct">6%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill" style="width:6%"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="question-num" id="question-num">문항 1</p>
+      <p class="question-text" id="question-text">Loading…</p>
+    </div>
+
+    <div class="answers" id="answers" role="radiogroup" aria-label="답변 선택"></div>
+
+    <nav class="quiz-nav" aria-label="문항 이동">
+      <button class="btn-ghost" id="btn-prev" onclick="prevQuestion()" style="visibility:hidden">← 이전</button>
+      <span style="font-size:0.8rem;color:var(--text-muted)" id="hint-text">A / B 키로도 선택 가능</span>
+      <button class="btn btn-outline" id="btn-next" onclick="nextQuestion()" style="width:auto;padding:10px 20px;display:none">다음 →</button>
+    </nav>
+  </section>
+
+  <!-- ══════════════════════════════
+       RESULT SCREEN
+  ══════════════════════════════ -->
+  <section id="screen-result" class="screen" aria-label="진단 결과" aria-live="polite">
+
+    <div class="card result-header">
+      <div id="result-badge" class="result-grade-badge" role="status"></div>
+      <div class="gauge-wrap" aria-hidden="true">
+        <svg class="gauge-svg" width="200" height="110" viewBox="0 0 200 110">
+          <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#EDE9F6" stroke-width="14" stroke-linecap="round"/>
+          <path id="gauge-fill" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#7C5CBF" stroke-width="14" stroke-linecap="round"
+            stroke-dasharray="251.2" stroke-dashoffset="251.2" style="transition:stroke-dashoffset 1.2s cubic-bezier(.4,0,.2,1)"/>
+        </svg>
+      </div>
+      <div class="result-score-display">
+        <span id="result-score">0</span><span class="result-score-max"> / 16</span>
+      </div>
+      <div class="result-grade-label" id="result-grade-label"></div>
+    </div>
+
+    <div class="card">
+      <p class="result-section-title">진단 결과 해석</p>
+      <p class="result-desc" id="result-desc"></p>
+    </div>
+
+    <div class="card">
+      <p class="result-section-title">권고 사항</p>
+      <div class="result-recommend" id="result-recommend"></div>
+    </div>
+
+    <!-- Ad: Result screen -->
+    <div class="ad-label">AD</div>
+    <div class="ad-wrap" id="ad-result">
+      <!-- Adsterra banner will render here -->
+    </div>
+
+    <div class="share-row">
+      <button class="btn btn-primary" onclick="copyResult()" id="btn-share">📋 결과 복사하기</button>
+      <button class="btn btn-outline" onclick="restartQuiz()">다시 테스트</button>
+    </div>
+  </section>
+
+</main>
+
+<footer role="contentinfo">
+  <p>NPD Self-Check · NPI-16 기반 자가진단 · 의학적 진단 아님</p>
+  <p class="visitor-counter" id="visitor-counter" aria-label="방문자 통계"></p>
+
+  <!-- Ad: Footer area -->
+  <div class="ad-label" style="margin-top:12px">AD</div>
+  <div class="ad-wrap" id="ad-footer" style="min-height:60px">
+    <!-- Adsterra banner will render here -->
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
