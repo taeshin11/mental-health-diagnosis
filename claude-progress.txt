@@ -1,13 +1,28 @@
 SESSION LOG
 ===========
 Last updated: 2026-04-03
-Last completed: M1 - GitHub repo created, harness files initialized
-Next target: M2 - Build index.html + style.css skeleton
+Last completed: M10 - Full app built, deployed, all features active
 
-NOTES:
+URLS:
 - GitHub repo: https://github.com/taeshin11/mental-health-diagnosis
-- Vercel URL: TBD (deploy after M2)
-- Google Sheets endpoint: TBD (setup after M4)
-- Adsterra key: TODO - requires account signup at adsterra.com
+- Live site:   https://mental-health-diagnosis.vercel.app
+- Apps Script: https://script.google.com/d/1jDVCYXYqAylRgGobihv24YaoufrZm8CQZwamRkU03-eksIL6BNpsQJd-/edit
+- Script endpoint: https://script.google.com/macros/s/AKfycbw3ATlLEwsD3mFFhbpVJ0gq35nHwk_vjd1mwyx9H5FE90EXjKzDRGu8dKDwP-O1FDjUzg/exec
 
-BLOCKERS: None currently
+COMPLETED FEATURES:
+- M1: Repo + harness files
+- M2: index.html + style.css skeleton
+- M3: Quiz engine (16 questions, A/B selection, auto-advance, keyboard shortcuts)
+- M4: Result screen (score, grade, arc gauge chart, grade text)
+- M5: Google Apps Script endpoint (doPost for results, doGet for visitor counter)
+- M6: Visitor counter in footer (async, non-blocking)
+- M7: Adsterra ad placeholders (3 locations) - TODO: insert real key from Adsterra dashboard
+- M8: SEO meta tags, sitemap.xml, robots.txt, structured data JSON-LD
+- M9: Responsive design (mobile-first, 375/768/1024px breakpoints)
+- M10: Vercel deployed, GitHub auto-deploy linked
+
+PENDING / TODOs:
+- ADSTERRA: Sign up at adsterra.com, create ad units, replace TODO: INSERT_ADSTERRA_KEY in index.html
+- OG IMAGE: Create og-image.png (1200x630) for social share previews
+
+BLOCKERS: None
