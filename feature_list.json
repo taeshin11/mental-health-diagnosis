@@ -1,0 +1,14 @@
+{
+  "features": [
+    { "id": "M1", "name": "Repo + harness files created", "done": true },
+    { "id": "M2", "name": "index.html + style.css skeleton (start screen)", "done": false },
+    { "id": "M3", "name": "Quiz engine (16 questions navigate correctly)", "done": false },
+    { "id": "M4", "name": "Result screen (score, grade, gauge chart)", "done": false },
+    { "id": "M5", "name": "Google Apps Script data collection POST", "done": false },
+    { "id": "M6", "name": "Visitor counter in footer", "done": false },
+    { "id": "M7", "name": "Adsterra ad units placed", "done": false },
+    { "id": "M8", "name": "SEO: meta tags, sitemap.xml, robots.txt", "done": false },
+    { "id": "M9", "name": "Responsive design verified", "done": false },
+    { "id": "M10", "name": "Final QA pass + Vercel live", "done": false }
+  ]
+}

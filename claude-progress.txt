@@ -1,0 +1,13 @@
+SESSION LOG
+===========
+Last updated: 2026-04-03
+Last completed: M1 - GitHub repo created, harness files initialized
+Next target: M2 - Build index.html + style.css skeleton
+
+NOTES:
+- GitHub repo: https://github.com/taeshin11/mental-health-diagnosis
+- Vercel URL: TBD (deploy after M2)
+- Google Sheets endpoint: TBD (setup after M4)
+- Adsterra key: TODO - requires account signup at adsterra.com
+
+BLOCKERS: None currently
